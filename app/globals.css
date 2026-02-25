@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #1a3d1a;
+  --primary-green: #1ec700;
+  --accent-green: #4be34b;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+
+/* No dark mode, solo verde y blanco */
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilos generales para cajas y botones principales */
+.main-box {
+  background: var(--white);
+  border: 2px solid var(--primary-green);
+  border-radius: 18px;
+  box-shadow: 0 0 16px 0 var(--accent-green);
+  color: var(--foreground);
+}
+
+.main-title {
+  color: var(--primary-green);
+  font-weight: bold;
+  text-shadow: 0 0 8px var(--accent-green);
+}
+
+.main-label {
+  color: var(--primary-green);
+  font-weight: 500;
+}
+
+.main-input {
+  border: 2px solid var(--primary-green);
+  border-radius: 8px;
+  padding: 8px 12px;
+  color: var(--foreground);
+  background: var(--white);
+}
+
+.main-button {
+  background: var(--primary-green);
+  color: var(--white);
+  border: none;
+  border-radius: 24px;
+  padding: 12px 32px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background 0.2s;
+  box-shadow: 0 0 8px 0 var(--accent-green);
+}
+.main-button:hover {
+  background: var(--accent-green);
+  color: var(--black);
+}
